@@ -8,6 +8,7 @@ namespace LogicalPrgrms
 {
     public class Reverse
     { 
+        //Reverse Number
     public void checkReverse()
     {
         int number, reverse = 0, remainder;

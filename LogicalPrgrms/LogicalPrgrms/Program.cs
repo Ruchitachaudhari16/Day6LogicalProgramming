@@ -10,33 +10,60 @@ namespace LogicalPrgrms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Logical Programming");
-            Console.WriteLine("Enter the choice ");
-            Console.WriteLine("1:Fibonacci Series");
-            Console.WriteLine("2:Prime Number");
-            Console.WriteLine("3:Reverse Number");
-            int choice=Convert.ToInt32(Console.ReadLine());
-            switch (choice)
+            bool flag = true;
+            while (flag)
             {
-                case 1:
-                    Console.WriteLine("Fibonacci Series");
-                    FibonacciSeries series = new FibonacciSeries();
-                    series.getFibonacciSeries();
-                    break;
+                Console.WriteLine("Logical Programming");
+                Console.WriteLine("1:Fibonacci Series");
+                Console.WriteLine("2:Prime Number");
+                Console.WriteLine("3:Reverse Number");
+                Console.WriteLine("4:Perfect Number");
+                {
+                    Console.WriteLine("Enter the choice ");
+                    int choice = Convert.ToInt32(Console.ReadLine());
+                    {
+                        switch (choice)
+                        {
+                            case 1:
+                                Console.WriteLine("Fibonacci Series");
+                                FibonacciSeries series = new FibonacciSeries();
+                                series.getFibonacciSeries();
+                                break;
 
-                    case 2:
-                    Console.WriteLine("Prime Number");
-                    PrimeNumber primeNumber = new PrimeNumber();
-                    primeNumber.primeCheck();
-                    break;
+                            case 2:
+                                Console.WriteLine("Prime Number");
+                                PrimeNumber primeNumber = new PrimeNumber();
+                                primeNumber.primeCheck();
 
-                    case 3:
-                    Console.WriteLine("Reverse Number");
-                    Reverse reverse = new Reverse();
-                    reverse.checkReverse();
-                    break;
+                                break;
+
+                            case 3:
+                                Console.WriteLine("Reverse Number");
+                                Reverse reverse = new Reverse();
+                                reverse.checkReverse();
+
+                                break;
+
+                            case 4:
+                                Console.WriteLine("Perfect Number");
+                                PerfectNumber perfectNumber = new PerfectNumber();
+                                perfectNumber.CheckPerfectNumber();
+
+                                break;
+
+                            default:
+                                Console.WriteLine("enter a valid choice");
+                                flag = false;
+                                break;
+                        }
+
+                        Console.ReadLine();
+
+                    }
+
+                }
             }
-            Console.ReadLine();
         }
     }
 }
+
