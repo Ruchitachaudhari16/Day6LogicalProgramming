@@ -12,6 +12,8 @@ namespace LogicalPrgrms
         {
             Console.WriteLine("Logical Programming");
             Console.WriteLine("Enter the choice ");
+            Console.WriteLine("1:Fibonacci Series");
+            Console.WriteLine("2:Prime Number");
             int choice=Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -19,6 +21,12 @@ namespace LogicalPrgrms
                     Console.WriteLine("Fibonacci Series");
                     FibonacciSeries series = new FibonacciSeries();
                     series.getFibonacciSeries();
+                    break;
+
+                    case 2:
+                    Console.WriteLine("Prime Number");
+                    PrimeNumber primeNumber = new PrimeNumber();
+                    primeNumber.primeCheck();
                     break;
             }
             Console.ReadLine();
